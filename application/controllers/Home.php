@@ -21,4 +21,9 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('Sucursales');
 	}
+	
+		public function registrarse()
+	{
+		$this->load->view('Registrarse');
+	}
 }

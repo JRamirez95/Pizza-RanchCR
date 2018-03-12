@@ -76,7 +76,7 @@
 			<li class="colour-4"><a href="archive.html">Promociones</a></li>
 			<li class="colour-5"><a href="reservation.html">Galería</a></li>
 			<li class="colour-6"><a href="staff.html">Ordenar</a></li>
-			<li class="colour-7"><a href="news.html">Registrarse</a></li>
+			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
 			<li class="colour-8"><a href="gallery.html">Iniciar Sesión</a></li>
 		</ul>
     </nav>

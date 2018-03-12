@@ -16,7 +16,8 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="css/zerogrid.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/zerogrid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/menu.css">
@@ -70,13 +71,13 @@
     <a href="#" class="nav-toggle">Menu</a>
     <nav class="cmn-tile-nav">
 		<ul class="clearfix">
-			<li class="colour-1"><a href="Home">Home</a></li>
+			<li class="colour-1"><a href="Home">Inicio</a></li>
 			<li class="colour-2"><a href="Menu">Menu</a></li>
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
 			<li class="colour-4"><a href="archive.html">Promociones</a></li>
 			<li class="colour-5"><a href="reservation.html">Galería</a></li>
 			<li class="colour-6"><a href="staff.html">Ordenar</a></li>
-			<li class="colour-7"><a href="news.html">Registrarse</a></li>
+			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
 			<li class="colour-8"><a href="gallery.html">Iniciar Sesión</a></li>
 		</ul>
     </nav>
@@ -95,7 +96,11 @@
 				<div class="row">
 					<div class="col-1-3">
 						<div class="wrap-col">
-							<h3>Pizzas</h3>
+                            <a class="btn btn-default" data-toggle="collapse" href="#pizzas" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <h3>Pizzas</h3><hr><img src="images/Pizzas/Pizza.jpg"/>
+                            </a>
+                            <div class="collapse" id="pizzas">
+                            <div class="card card-body">
 							<div class="post">
 								<a href="#"><img src="images/Pizzas/Brazileña.jpg"/></a>
 								<div class="wrapper">
@@ -123,12 +128,18 @@
 								  <h5>Hawaiana</h5>
 								  <span>$25 - $26</span>
 								</div>
-                            </div>                             
+                            </div> 
+                        </div>
+                        </div>                                
 						</div>
 					</div>
 					<div class="col-1-3">
 						<div class="wrap-col">
-							<h3>Calzone</h3>
+                            <a class="btn btn-default" data-toggle="collapse" href="#calzone" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <h3>Calzone</h3><hr><img src="images/Calzone/Calzone.jpg"/>
+                            </a>
+                            <div class="collapse" id="calzone">
+                            <div class="card card-body">
 							<div class="post">
 								<a href="#"><img src="images/Calzone/Calzone Basico.jpg"/></a>
 								<div class="wrapper">
@@ -156,12 +167,18 @@
 								  <h5>Chicken Ranch</h5>
 								  <span>₡ 3,000.00</span>
 								</div>
-							</div>
+                            </div>
+                        </div>
+                        </div>    
 						</div>
 					</div>
 					<div class="col-1-3">
 						<div class="wrap-col">
-							<h3>Ordenes</h3>
+                            <a class="btn btn-default" data-toggle="collapse" href="#ordenes" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <h3>Ordenes</h3><hr><img src="images/Ordenes/Ordenes.jpg"/>
+                            </a>
+                            <div class="collapse" id="ordenes">
+                            <div class="card card-body">
 							<div class="post">
 								<a href="#"><img src="images/Ordenes/Breadsticks Ranch.jpg"/></a>
 								<div class="wrapper">
@@ -189,14 +206,20 @@
 								  <h5>Salsa</h5>
 								  <span>$25 - $26</span>
 								</div>
-							</div>
+                            </div>
+                        </div>
+                        </div>    
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-1-3">
 						<div class="wrap-col">
-							<h3>Pastas</h3>
+                            <a class="btn btn-default" data-toggle="collapse" href="#pastas" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <h3>Pastas</h3><hr><img src="images/Pastas/Pastas.jpg"/>
+                            </a>
+                            <div class="collapse" id="pastas">
+                            <div class="card card-body">
 							<div class="post">
 								<a href="#"><img src="images/Pastas/Espaguetti Bolognes.jpg"/></a>
 								<div class="wrapper">
@@ -224,12 +247,18 @@
 								  <h5>Espaguetti Meat Lover Ranch</h5>
 								   <span>$25 - $26</span>
 								</div>
-							</div>
+                            </div>
+                        </div>
+                        </div>    
 						</div>
 					</div>
 					<div class="col-1-3">
 						<div class="wrap-col">
-							<h3>Pizzas por Mitades</h3>
+                            <a class="btn btn-default" data-toggle="collapse" href="#pxm" role="button" aria-expanded="false" aria-controls="collapseExample">
+                            <h3>Pizzas por Mitades</h3><hr><img src="images/Pizzas x Mitades/Pasta Delgada.jpg"/>
+                            </a>
+                            <div class="collapse" id="pxm">
+                            <div class="card card-body">
 							<div class="post">
 								<a href="#"><img src="images/Pizzas x Mitades/Borde de Queso.jpg"/></a>
 								<div class="wrapper">
@@ -250,12 +279,18 @@
 								  <h5>Pasta Gruesa</h5>
 								   <span>$25 - $26</span>
 								</div>
-							</div>
+                            </div>
+                        </div>
+                        </div>    
 						</div>
 					</div>
 					<div class="col-1-3">
 						<div class="wrap-col">
-							<h3>Postres</h3>
+							<a class="btn btn-default" data-toggle="collapse" href="#postres" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                <h3>Postres</h3><hr><img src="images/Postres/Postres 3 Leches.jpg"/>
+                            </a>
+                            <div class="collapse" id="postres">
+                            <div class="card card-body">
 							<div class="post">
 								<a href="#"><img src="images/Postres/Cajeta de Coco.jpg"/></a>
 								<div class="wrapper">
@@ -269,7 +304,9 @@
 								  <h5>Tres Leches</h5>
 								   <span>$25 - $26</span>
 								</div>
-							</div>						
+                            </div>
+                            </div>
+                            </div>						
 						</div>
 					</div>
 				</div>
@@ -320,7 +357,11 @@
 </footer>
 
 
-	<!-- js -->
+    <!-- js -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
 	
