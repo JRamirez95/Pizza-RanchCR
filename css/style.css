@@ -395,7 +395,7 @@ a.button.bt2 {}
 .info {
     background: rgba(0, 0, 0, 0.2);
 	align-content: center;
-	margin-bottom: 70%;
+	margin-bottom: 90%;
 }
 .info h3 {
 	text-align: center;
@@ -410,5 +410,10 @@ a.button.bt2 {}
     background: #654e2d;
 }
 
-
-
+#map
+{
+	background: #fff;
+	padding: 30%;
+	border: 1px solid #bbb;
+	max-width: 520px;
+}

@@ -12,7 +12,7 @@
 	
     <!-- Mobile Specific Metas
   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     
     <!-- CSS
   ================================================== -->
@@ -78,7 +78,7 @@
 			<li class="colour-5"><a href="reservation.html">Galería</a></li>
 			<li class="colour-6"><a href="staff.html">Ordenar</a></li>
 			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
-			<li class="colour-8"><a href="gallery.html">Iniciar Sesión</a></li>
+			<li class="colour-8"><a href="Login">Iniciar Sesión</a></li>
 		</ul>
     </nav>
 	
@@ -165,7 +165,16 @@
                                         </label>  
 
 										<label class="row">
-											<div class="col-1-3">
+                                            
+												<div class="wrap-col">
+                                                    <div id="map">
+                                                        <script async defer
+                                                            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVDzvvE7UhvRLQXBbsbr4ILGTqrIt50EA&callback=initMap">
+                                                        </script>
+                                                    </div>
+                                                </div>
+                                            
+											<!-- <div class="col-1-3">
 												<div class="wrap-col">
 												<select type="text" name="subject" id="subject" required="required">
                                                     <option selected disabled value="">Provincia</option>
@@ -185,7 +194,7 @@
                                                     <option selected disabled value="">Distrito</option>
                                                 </select>
 												</div>
-											</div>											
+											</div>											 -->
                                         </label>
                                         
 										<label class="row">
@@ -208,7 +217,7 @@
                                         </label>
                                         <hr color="black">
                                         <p>* Campos obligatorios</p>
-										<center><input class="sendButton" type="submit" name="Submit" value="Registrarse"></center>
+										<center><button type="submit" class="btn btn-primary btn-block">Registrarse</button></center>
 									</form>
 								</div>
 							</div>
@@ -244,7 +253,7 @@
 
 <!--////////////////////////////////////Footer-->
 <footer class="zerogrid">
-	<div class="wrap-footer">
+	<!-- <div class="wrap-footer">
 		<div class="row">
 			<div class="col-1-3">
 				<div class="wrap-col">
@@ -271,7 +280,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="copyright">
 		<div class="wrapper">
 			Copyright 2018 - Diseñado por <a href="m">JAKADESIGN</a>
@@ -282,9 +291,8 @@
 		</div>
 	</div>
 </footer>
-
-
-	<!-- js -->
+   
+    <script src="js/map.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
 	
