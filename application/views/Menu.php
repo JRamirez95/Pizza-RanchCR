@@ -317,7 +317,7 @@
 
 <!--////////////////////////////////////Footer-->
 <footer class="zerogrid">
-	<div class="wrap-footer">
+	<!-- <div class="wrap-footer">
 		<div class="row">
 			<div class="col-1-3">
 				<div class="wrap-col">
@@ -344,15 +344,15 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	<div class="copyright">
-		<div class="wrapper">
+		<center><div class="wrapper">
 			Copyright 2018 - Diseñado por <a href="m">JAKADESIGN</a>
-			<ul class="quick-link f-right">
+			<!-- <ul class="quick-link f-right">
 				<li><a href="#">Politicas de Privacidad</a></li>
 				<li><a href="#">Terminos y Condiciones</a></li>
-			</ul>
-		</div>
+			</ul> -->
+		</div></center>
 	</div>
 </footer>
 

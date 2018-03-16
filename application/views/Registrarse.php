@@ -98,12 +98,12 @@
 						<div class="wrap-col">
 							<div class="contact">
 								<div id="contact_form">
-									<form name="contact" id="contact" method="post" action="reservation.php">
+									<form name="contact" id="contact" method="post" action="/Pizza-RanchCR/home/registroClientes">
 
                                         <label class="row">
 											<div class="col-1-1">
 												<div class="wrap-col">
-													<input type="number" name="name" id="name" placeholder="Cedula *" required="required" />
+													<input type="number" name="cedula" id="cedula" placeholder="Cedula *" required="required" />
 												</div>
                                             </div>
                                         </label>   
@@ -111,7 +111,7 @@
 										<label class="row">
 											<div class="col-1-1">
 												<div class="wrap-col">
-													<input type="text" name="name" id="name" placeholder="Nombre *" required="required" />
+													<input type="text" name="nombre" id="nombre" placeholder="Nombre *" required="required" />
 												</div>
                                             </div>                                   
                                         </label>
@@ -119,7 +119,7 @@
                                         <label class="row">
                                              <div class="col-1-1">
 												<div class="wrap-col">
-													<input type="text" name="lastName" id="lastName" placeholder="Apellidos *" required="required" />
+													<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos *" required="required" />
 												</div>
                                             </div>
                                         </label>
@@ -135,7 +135,7 @@
                                         <label class="row">
                                             <div class="col-1-1">
 												<div class="wrap-col">
-													<input type="email" name="email" id="email" placeholder="Confirmación de Email *" required="required" />
+													<input type="email" name="confEmail" id="email1" placeholder="Confirmación de Email *" required="required" />
 												</div>
 											</div>
                                         </label>
@@ -151,7 +151,7 @@
                                         <label class="row">
                                             <div class="col-1-1">
 												<div class="wrap-col">
-													<input type="password" name="password" id="password" placeholder="Contraseña *" required="required" />
+													<input type="password" name="contrasena" id="contrasena" placeholder="Contraseña *" required="required" />
 												</div>
 											</div>
                                         </label>
@@ -159,11 +159,11 @@
                                         <label class="row">
                                             <div class="col-1-1">
 												<div class="wrap-col">
-													<input type="password" name="password" id="password" placeholder="Repetir Contraseña *" required="required" />
+													<input type="password" name="contrasena1" id="contrasena1" placeholder="Repetir Contraseña *" required="required" />
 												</div>
 											</div>
-                                        </label>  
-
+                                        </label> 
+											
 										<label class="row">
                                             
 												<div class="wrap-col">
@@ -171,9 +171,21 @@
                                                         <script async defer
                                                             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVDzvvE7UhvRLQXBbsbr4ILGTqrIt50EA&callback=initMap">
                                                         </script>
-                                                    </div>
+													</div>																	
                                                 </div>
-                                            
+											
+												<div class="col-1-3">
+													<div class="wrap-col">
+														<label for="lat">Latitud</label>
+														<input type="text" name="lat" id="lat" readonly>
+													</div>
+												</div>	
+												<div class="col-1-3">
+													<div class="wrap-col">	
+														<label for="lng">Longitud</label>
+														<input type="text" name="lng" id="lng" readonly>
+													</div>
+												</div>	
 											<!-- <div class="col-1-3">
 												<div class="wrap-col">
 												<select type="text" name="subject" id="subject" required="required">
@@ -199,19 +211,19 @@
                                         
 										<label class="row">
 											<div class="wrap-col">
-												<textarea name="message" id="message" class="form-control" rows="4" cols="25" required="required"
+												<textarea name="direccion" id="message" class="form-control" rows="4" cols="25" required="required"
 												placeholder="Dirección exacta con señas"></textarea>
 											</div>
                                         </label>                                        
                                         
                                         <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" checked>
+                                            <input type="checkbox" id="" class="custom-control-input" checked required>
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">Acepto las condiciones de uso y entiendo que mi información será utilizada como se describe en la Política de privacidad de Pizza Ranch.</span>
                                         </label>
                                         
                                         <label class="custom-control custom-checkbox">
-                                            <input type="checkbox" class="custom-control-input" checked>
+                                            <input type="checkbox" id="" class="custom-control-input" checked required>
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">Acepto recibir mensajes de correo electrónico, promociones y ofertas especiales de Pizza Ranch.</span>
                                         </label>

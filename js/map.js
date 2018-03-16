@@ -16,8 +16,9 @@ function initMap() {
             var pos = {
                 lat: position.coords.latitude,
                 lng: position.coords.longitude
-            };
-
+            };          
+            document.getElementById('lat').value = pos.lat;
+            document.getElementById('lng').value = pos.lng;
             infoWindow.setPosition(pos);
             infoWindow.setContent('Location found.');
             map.setCenter(pos);

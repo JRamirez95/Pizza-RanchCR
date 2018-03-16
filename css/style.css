@@ -59,7 +59,7 @@ section:after, section:before{clear: both; content: '\0020'; display: block; vis
 /* ------------------------------------Html-Body------------------------------- */
 /* ---------------------------------------------------------------------------- */
 html, body {width:100%; padding:0; margin:0;}
-body {background: #292522 url(../images/bg.png) repeat center center;color: #3F3F3F;font: 16px/25px Arial, Helvetica, sans-serif;font-family: 'Goudy Bookletter 1911',Georgia,serif;}
+body {background: #292522 url(../images/bg.png) repeat center center;color: #3F3F3F;font: 16px/25px Arial, Helvetica, sans-serif;}
 body .wrap-body{}
 
 /* --Line-- */
