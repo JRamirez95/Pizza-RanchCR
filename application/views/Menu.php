@@ -62,9 +62,9 @@
 	</header>
 	<div class="site-title">
 		<div class="zerogrid">
-			<div class="row">
+			
 				<h2 class="t-center">Invitado</h2>
-			</div>
+			
 		</div>
 	</div>
     <!--//////////////////////////////////////Menu-->
@@ -74,11 +74,12 @@
 			<li class="colour-1"><a href="Home">Inicio</a></li>
 			<li class="colour-2"><a href="Menu">Menu</a></li>
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
-			<li class="colour-4"><a href="archive.html">Promociones</a></li>
-			<li class="colour-5"><a href="reservation.html">Galería</a></li>
+			<li class="colour-4"><a href="Promos">Promociones</a></li>
+			<li class="colour-5"><a href="Galeria">Galería</a></li>
 			<li class="colour-6"><a href="staff.html">Ordenar</a></li>
 			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
-			<li class="colour-8"><a href="gallery.html">Iniciar Sesión</a></li>
+			<li class="colour-8"><a href="Login">Iniciar Sesión</a></li>
+			<!-- <li class="colour-8"><a href="Perfil">Iniciar Sesión</a></li> -->
 		</ul>
     </nav>
 	
@@ -86,11 +87,12 @@
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
-			<ul>
+		<h2 class="t-center">MENÚ</h2>
+			<!-- <ul>
 				<li><a href="Home">Inicio</a></li>
 				<li><a href="menu.html">Menu</a></li>
-			</ul>
-		</div>
+			</ul> -->
+		</div> 
 		<div id="main-content">
 			<div class="wrap-content">
 				<div class="row">
@@ -101,6 +103,7 @@
                             </a>
                             <div class="collapse" id="pizzas">
                             <div class="card card-body">
+
 							<div class="post">
 								<a href="#"><img src="images/Pizzas/Brazileña.jpg"/></a>
 								<div class="wrapper">
@@ -108,29 +111,9 @@
 								  <span>$25 - $26</span>
 								</div>
 							</div>
-							<div class="post">
-								<a href="#"><img src="images/Pizzas/Canadiense.jpg"/></a>
-								<div class="wrapper">
-								  <h5>Canadiense</h5>
-								   <span>$25 - $26</span>
-								</div>
-							</div>
-							<div class="post">
-								<a href="#"><img src="images/Pizzas/ChickenRanch.jpg"/></a>
-								<div class="wrapper">
-								  <h5>Chicken Ranch</h5>
-								  <span>$25 - $26</span>
-								</div>
-                            </div>
-                            <div class="post">
-								<a href="#"><img src="images/Pizzas/Hawaiana.jpg"/></a>
-								<div class="wrapper">
-								  <h5>Hawaiana</h5>
-								  <span>$25 - $26</span>
-								</div>
-                            </div> 
-                        </div>
-                        </div>                                
+						</div>
+						
+         </div>                                
 						</div>
 					</div>
 					<div class="col-1-3">

@@ -8,7 +8,7 @@
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Login</title>	
+	<title>Galeria</title>	
 	
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -16,8 +16,6 @@
     
     <!-- CSS
   ================================================== -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
- 	 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   	<link rel="stylesheet" href="css/zerogrid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
@@ -34,8 +32,8 @@
     <!--[if lt IE 9]>
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
-     
+    <![endif]-->
+   
 </head>
 <body>
 <div class="wrap-body">
@@ -62,15 +60,17 @@
 		</div>
 	</header>
 	<div class="site-title">
-		<div class="zerogrid">			
-			<h2 class="t-center">Invitado</h2>			
+		<div class="zerogrid">
+			<div class="row">
+				<h2 class="t-center">Invitado</h2>
+			</div>
 		</div>
 	</div>
     <!--//////////////////////////////////////Menu-->
-    <a href="#" class="nav-toggle">Menu</a>
+    <a href="#" class="nav-toggle">Toggle Navigation</a>
     <nav class="cmn-tile-nav">
 		<ul class="clearfix">
-		<li class="colour-1"><a href="Home">Inicio</a></li>
+			<li class="colour-1"><a href="Home">Inicio</a></li>
 			<li class="colour-2"><a href="Menu">Menu</a></li>
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
 			<li class="colour-4"><a href="Promos">Promociones</a></li>
@@ -85,85 +85,24 @@
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
-		<h2 class="t-center">INICIO DE SESIÓN</h2>	
+			<h2 class="t-center">GALERÍA</h2>	
 			<!-- <ul>
 				<li><a href="Home">Inicio</a></li>
 				<li><a href="Login">Iniciar Sesión</a></li>
 			</ul> -->
-		</div>
+		</div>	
 		<div id="main-content">
 			<div class="wrap-content">
-			    <div class="container">
-                    <form class="form-horizontal" role="form" method="POST" action="/Pizza-RanchCR/home/inicioSesion">
-                        <!-- <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <center><h2>Inicio de Sesión</h2></cneter>
-                                <hr>
-                            </div>
-                        </div> -->
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="sr-only" for="email">E-Mail Address</label>
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fas fa-at"></i></div>
-                                        <input type="email" name="email" class="form-control" id="email"
-                                            placeholder="you@example.com" required autofocus>
-                                    </div>
-                                </div>
-                            </div>                            
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="sr-only" for="password">Contraseña</label>
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fas fa-unlock"></i></div>
-                                        <input type="password" name="contrasena" class="form-control" id="password"
-                                            placeholder="Contraseña" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-control-feedback">
-                                    <span class="text-danger align-middle">
-                                    <!-- Put password error message here -->    
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6" style="padding-top: .35rem">
-                                <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name="remember"
-                                            type="checkbox" >
-                                        <span style="padding-bottom: .15rem">Remember me</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="row" style="padding-top: 1rem">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <center><button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Iniciar Sesión</button></center>
-                                <!-- <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a> -->
-                            </div>
-                        </div>
-                    </form>
-                </div>
-			</div>
+				<div class="row">
+					
+				</div>               
 		</div> 
 	</div>
 </section>
 
 <!--////////////////////////////////////Footer-->
 <footer class="zerogrid">
-	<!-- <div class="wrap-footer">
+	<div class="wrap-footer">
 		<div class="row">
 			<div class="col-1-3">
 				<div class="wrap-col">
@@ -190,7 +129,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<div class="copyright">
 		<div class="wrapper">
 			Copyright 2018 - Diseñado por <a href="m">JAKADESIGN</a>
@@ -206,6 +145,6 @@
 	<!-- js -->
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
-	
+
 </div>
 </body></html>

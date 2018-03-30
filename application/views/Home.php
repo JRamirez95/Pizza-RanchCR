@@ -74,8 +74,8 @@
 			<li class="colour-1"><a href="Home">Inicio</a></li>
 			<li class="colour-2"><a href="Menu">Menu</a></li>
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
-			<li class="colour-4"><a href="archive.html">Promociones</a></li>
-			<li class="colour-5"><a href="reservation.html">Galería</a></li>
+			<li class="colour-4"><a href="Promos">Promociones</a></li>
+			<li class="colour-5"><a href="Galeria">Galería</a></li>
 			<li class="colour-6"><a href="staff.html">Ordenar</a></li>
 			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
 			<li class="colour-8"><a href="Login">Iniciar Sesión</a></li>

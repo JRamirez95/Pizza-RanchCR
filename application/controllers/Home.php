@@ -32,7 +32,48 @@ class Home extends CI_Controller {
 		$this->load->view('Login');
 	}
 
-	    public function registroClientes()
+		public function perfil()
+	{
+		$this->load->view('Perfil');
+	}
+
+		public function galeria()
+	{
+		$this->load->view('Galeria');
+	}
+
+		public function promos()
+	{
+		$this->load->view('Promociones');
+	}
+
+		public function puntos()
+	{
+		$this->load->view('Usuarios/Puntos');
+	}
+
+		public function editarPerfil()
+	{
+		$this->load->view('Usuarios/Editar Perfil');
+	}
+	
+		public function cambiarContrasena()
+	{
+		$this->load->view('Usuarios/Cambiar Contraseña');
+	}
+
+		public function promociones()
+	{
+		$this->load->view('Usuarios/Promociones');
+	}
+
+		public function listaPromociones()
+	{
+		$this->load->view('Usuarios/Lista Promociones');
+	}
+
+
+	public function registroClientes()
     {
 		// get the params
 		$cedula = $this->input->post('cedula');
@@ -51,8 +92,10 @@ class Home extends CI_Controller {
 			?><script type=text/javascript>alert("Email no coinciden");</script><?php
 			// redirect('/Pizza-RanchCR/Home');
 		}else if ($contrasena != $confContra) {
-			?><script type=text/javascript>alert("Las contraseñas no coinciden");</script><?php
-			// redirect('/Pizza-RanchCR/Home');
+			
+			echo "<script> alert('Las contraseñas no coinciden');</script>";
+			redirect('Pizza-RanchCR/Registrarse', 'refresh');
+			
 		}else
 		{	
 		
@@ -81,5 +124,22 @@ class Home extends CI_Controller {
 			}
 		
 		}
+	}
+	  
+	public function inicioSesion()
+    {
+        $email = $this->input->post('email');
+        $contrasena = $this->input->post('contrasena');
+        //$pass= md5($password);
+
+       $r = $this->Ranch_model->inicioSesion($email, $contrasena);
+
+        if ($r == true) {
+            // $this->session->set_flashdata('message', 'User saved');
+   			redirect('/Mypetscr/CodeIgniter-3.1.6/user/paso');       
+        } else {
+            // $this->session->set_flashdata('message', 'There was an error saving the user');
+            redirect('/Mypetscr/CodeIgniter-3.1.6/user/login');
+        }
     }
 }

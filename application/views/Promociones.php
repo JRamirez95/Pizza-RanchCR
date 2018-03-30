@@ -8,7 +8,7 @@
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Login</title>	
+	<title>Promociones</title>	
 	
     <!-- Mobile Specific Metas
   ================================================== -->
@@ -17,11 +17,11 @@
     <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
- 	 <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
   	<link rel="stylesheet" href="css/zerogrid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/promos.css">
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<!--[if lt IE 8]>
@@ -34,8 +34,8 @@
     <!--[if lt IE 9]>
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
-     
+    <![endif]-->
+   
 </head>
 <body>
 <div class="wrap-body">
@@ -70,10 +70,10 @@
     <a href="#" class="nav-toggle">Menu</a>
     <nav class="cmn-tile-nav">
 		<ul class="clearfix">
-		<li class="colour-1"><a href="Home">Inicio</a></li>
+			<li class="colour-1"><a href="Home">Inicio</a></li>
 			<li class="colour-2"><a href="Menu">Menu</a></li>
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
-			<li class="colour-4"><a href="Promos">Promociones</a></li>
+			<li class="colour-4"><a href="archive.html">Promociones</a></li>
 			<li class="colour-5"><a href="Galeria">Galería</a></li>
 			<li class="colour-6"><a href="">Ordenar</a></li>
 			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
@@ -84,86 +84,81 @@
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
-		<div class="crumbs">
-		<h2 class="t-center">INICIO DE SESIÓN</h2>	
+        <div class="crumbs">
+			<h2 class="t-center">PROMOCIONES DEL DÍA</h2>
 			<!-- <ul>
 				<li><a href="Home">Inicio</a></li>
-				<li><a href="Login">Iniciar Sesión</a></li>
+				<li><a href="Sucursales">Sucursales</a></li>
 			</ul> -->
-		</div>
+		</div>	
 		<div id="main-content">
 			<div class="wrap-content">
-			    <div class="container">
-                    <form class="form-horizontal" role="form" method="POST" action="/Pizza-RanchCR/home/inicioSesion">
-                        <!-- <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <center><h2>Inicio de Sesión</h2></cneter>
-                                <hr>
+				<div class="row">
+					<!-- Image -->
+                    <div class="col-12 col-lg-6">
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <a href="" data-toggle="modal" data-target="#productModal">
+                                    <img class="img-fluid" src="https://s3.amazonaws.com/visit-nebraska-production/eats/images/000/009/677/slider/Pizza_Ranch.jpg?1488322947" />                                    
+                                </a>
                             </div>
-                        </div> -->
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="sr-only" for="email">E-Mail Address</label>
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fas fa-at"></i></div>
-                                        <input type="email" name="email" class="form-control" id="email"
-                                            placeholder="you@example.com" required autofocus>
+                        </div>
+                    </div>
+
+                    <!-- Add to cart -->
+                    <div class="col-12 col-lg-6 add_to_cart_block">
+                        <div class="card bg-light mb-3">
+                            <div class="card-body">
+                                <p class="price">16,000.00 ₡</p>
+                                <p class="price_discounted">12,000.00 ₡</p>
+                                <form method="get" action="cart.html">
+                                    <div class="form-group">
+                                        <label for="colors">Sucursales</label>
+                                        <select class="custom-select" id="colors">
+                                            <option selected>Seleccionar</option>
+                                            <option value="1">Ciudad Quesada</option>
+                                            <option value="2">La Fortuna</option>                                           
+                                        </select>
                                     </div>
-                                </div>
-                            </div>                            
-                        </div>
-                        <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label class="sr-only" for="password">Contraseña</label>
-                                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
-                                        <div class="input-group-addon" style="width: 2.6rem"><i class="fas fa-unlock"></i></div>
-                                        <input type="password" name="contrasena" class="form-control" id="password"
-                                            placeholder="Contraseña" required>
+                                    <div class="form-group">
+                                        <label>Cantidad :</label>
+                                        <div class="input-group mb-3">
+                                            <div class="input-group-prepend">
+                                                <button type="button" class="quantity-left-minus btn btn-danger btn-number"  data-type="minus" data-field="">
+                                                    <i class="fa fa-minus"></i>
+                                                </button>
+                                            </div>
+                                            <input type="text" class="form-control"  id="quantity" name="quantity" min="1" max="100" value="1">
+                                            <div class="input-group-append">
+                                                <button type="button" class="quantity-right-plus btn btn-success btn-number" data-type="plus" data-field="">
+                                                    <i class="fa fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <a href="cart.html" class="btn btn-success btn-lg btn-block text-uppercase">
+                                        <i class="fa fa-shopping-cart"></i> Add To Cart
+                                    </a>
+                                </form>
+                                <div class="product_rassurance">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item"><i class="fa fa-truck fa-2x"></i><br/>Express</li>
+                                        <li class="list-inline-item"><i class="fa fa-credit-card fa-2x"></i><br/>Pagar con Tarjeta</li>
+                                        <li class="list-inline-item"><i class="fa fa-phone fa-2x"></i><br/>+506 2460-09-09</li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="form-control-feedback">
-                                    <span class="text-danger align-middle">
-                                    <!-- Put password error message here -->    
-                                    </span>
-                                </div>
+                                                              
                             </div>
                         </div>
-                        <!-- <div class="row">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6" style="padding-top: .35rem">
-                                <div class="form-check mb-2 mr-sm-2 mb-sm-0">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" name="remember"
-                                            type="checkbox" >
-                                        <span style="padding-bottom: .15rem">Remember me</span>
-                                    </label>
-                                </div>
-                            </div>
-                        </div> -->
-                        <div class="row" style="padding-top: 1rem">
-                            <div class="col-md-3"></div>
-                            <div class="col-md-6">
-                                <center><button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Iniciar Sesión</button></center>
-                                <!-- <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a> -->
-                            </div>
-                        </div>
-                    </form>
-                </div>
-			</div>
+                    </div>
+				</div>               
 		</div> 
 	</div>
 </section>
 
 <!--////////////////////////////////////Footer-->
 <footer class="zerogrid">
-	<!-- <div class="wrap-footer">
+	<div class="wrap-footer">
 		<div class="row">
 			<div class="col-1-3">
 				<div class="wrap-col">
@@ -190,7 +185,7 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
 	<div class="copyright">
 		<div class="wrapper">
 			Copyright 2018 - Diseñado por <a href="m">JAKADESIGN</a>
@@ -201,11 +196,14 @@
 		</div>
 	</div>
 </footer>
-
+</div>
 
 	<!-- js -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
-	
-</div>
+    <script src="js/promos.js"></script>
+
+
 </body></html>
