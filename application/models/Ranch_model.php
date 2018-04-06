@@ -1,17 +1,17 @@
 <?php
 class Ranch_model extends CI_Model {
 
-    function registroClientes($cliente)
+    function registrar($usuario)
     {
-        $email = $cliente ['email'];        
-        $ced = $cliente ['cedula'];      
+        $email = $usuario ['email'];        
+        $ced = $usuario ['cedula'];      
         
         // $this->db->select('cedula');
         // $this->db->from('clientes');
         // $this->db->where('cedula', $ced);
         // $query = $this->db->get('clientes')->row();
         
-        $query = $this->db->query("SELECT * FROM clientes");        
+        $query = $this->db->query("SELECT * FROM usuario");        
         $row = $query->row();
         $email1 = $row->email;
         $ced1 = $row->cedula;
@@ -25,7 +25,7 @@ class Ranch_model extends CI_Model {
             echo "<script> alert('Dirección de Email ya esta registrado');</script>";
 
         }else{
-            $r = $this->db->insert('clientes', $cliente);
+            $r = $this->db->insert('usuario', $usuario);
             return $r;
         }
       
@@ -33,7 +33,7 @@ class Ranch_model extends CI_Model {
 
     function inicioSesion($email, $contrasena) {   
 
-        $query = $this->db->query("SELECT * FROM clientes WHERE email = '$email' ");
+        $query = $this->db->query("SELECT * FROM usuario WHERE email= '".$email."'");
         $row = $query->num_rows();
 		// $this -> db -> from('clientes');
 		// $this -> db -> where('email', $email);

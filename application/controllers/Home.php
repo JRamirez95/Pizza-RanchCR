@@ -73,7 +73,7 @@ class Home extends CI_Controller {
 	}
 
 
-	public function registroClientes()
+	public function registrar()
     {
 		// get the params
 		$cedula = $this->input->post('cedula');
@@ -86,6 +86,7 @@ class Home extends CI_Controller {
 		$lat = $this->input->post('lat');
 		$lng = $this->input->post('lng');
 		$direccion = $this->input->post('direccion');
+		$tel = $this->input->post('telefono');
 
 		if ($email != $confEmail) 
 		{
@@ -94,12 +95,12 @@ class Home extends CI_Controller {
 		}else if ($contrasena != $confContra) {
 			
 			echo "<script> alert('Las contraseñas no coinciden');</script>";
-			redirect('Pizza-RanchCR/Registrarse', 'refresh');
+			// redirect('Pizza-RanchCR/Registrarse', 'refresh');
 			
 		}else
 		{	
 		
-			$cliente = array(
+			$usuario = array(
 				'cedula' => $cedula,
 				'nombre' => $nombre,
 				'apellidos' => $apellidos,
@@ -107,10 +108,11 @@ class Home extends CI_Controller {
 				'contrasena' => $contrasena,
 				'lat' => $lat,
 				'lng' => $lng,
-				'direccion' => $direccion
+				'direccion' => $direccion,
+				'telefono' => $tel
 			);
 			// call the model to save
-			$r = $this->Ranch_model->registroClientes($cliente);
+			$r = $this->Ranch_model->registrar($usuario);
 			
 			// redirect
 			if ($r) {
@@ -136,10 +138,11 @@ class Home extends CI_Controller {
 
         if ($r == true) {
             // $this->session->set_flashdata('message', 'User saved');
-   			redirect('/Mypetscr/CodeIgniter-3.1.6/user/paso');       
+				redirect('/Pizza-RanchCR/Perfil');
+				?><script type=text/javascript>alert("Bienvenido");</script><?php   
         } else {
             // $this->session->set_flashdata('message', 'There was an error saving the user');
-            redirect('/Mypetscr/CodeIgniter-3.1.6/user/login');
+            ?><script type=text/javascript>alert("Credenciales Incorrectos");</script><?php
         }
     }
 }

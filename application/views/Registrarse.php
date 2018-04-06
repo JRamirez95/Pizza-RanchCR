@@ -99,7 +99,7 @@
 						<div class="wrap-col">
 							<div class="contact">
 								<div id="contact_form">
-									<form name="contact" id="contact" method="post" action="/Pizza-RanchCR/home/registroClientes">
+									<form name="contact" id="contact" method="post" action="/Pizza-RanchCR/home/registrar">
 
                                         <label class="row">
 											<div class="col-1-1">
@@ -123,6 +123,14 @@
 													<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos *" required="required" />
 												</div>
                                             </div>
+                                        </label>
+
+										<label class="row">
+                                            <div class="col-1-1">
+												<div class="wrap-col">
+													<input type="telephone" name="telefono" id="telefono" placeholder="Teléfono/Celular *" required="required" />
+												</div>
+											</div>
                                         </label>
 
                                         <label class="row">
