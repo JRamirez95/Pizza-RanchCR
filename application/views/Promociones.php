@@ -8,12 +8,12 @@
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Promociones</title>	
-	
+	<title>Promociones</title>
+
     <!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -35,7 +35,7 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
     <![endif]-->
-   
+
 </head>
 <body>
 <div class="wrap-body">
@@ -62,8 +62,8 @@
 		</div>
 	</header>
 	<div class="site-title">
-		<div class="zerogrid">			
-			<h2 class="t-center">Invitado</h2>			
+		<div class="zerogrid">
+			<h2 class="t-center">Invitado</h2>
 		</div>
 	</div>
     <!--//////////////////////////////////////Menu-->
@@ -73,14 +73,14 @@
 			<li class="colour-1"><a href="Home">Inicio</a></li>
 			<li class="colour-2"><a href="Menu">Menu</a></li>
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
-			<li class="colour-4"><a href="archive.html">Promociones</a></li>
+			<li class="colour-4"><a href="Promos">Promociones</a></li>
 			<li class="colour-5"><a href="Galeria">Galería</a></li>
 			<li class="colour-6"><a href="">Ordenar</a></li>
 			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
 			<li class="colour-8"><a href="Login">Iniciar Sesión</a></li>
 		</ul>
     </nav>
-	
+
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
@@ -90,16 +90,17 @@
 				<li><a href="Home">Inicio</a></li>
 				<li><a href="Sucursales">Sucursales</a></li>
 			</ul> -->
-		</div>	
+		</div>
 		<div id="main-content">
 			<div class="wrap-content">
+				<?php foreach ($promos as $index=> $promo){ ?>
 				<div class="row">
 					<!-- Image -->
                     <div class="col-12 col-lg-6">
                         <div class="card bg-light mb-3">
                             <div class="card-body">
                                 <a href="" data-toggle="modal" data-target="#productModal">
-                                    <img class="img-fluid" src="https://s3.amazonaws.com/visit-nebraska-production/eats/images/000/009/677/slider/Pizza_Ranch.jpg?1488322947" />                                    
+                                    <img class="img-fluid" src="https://s3.amazonaws.com/visit-nebraska-production/eats/images/000/009/677/slider/Pizza_Ranch.jpg?1488322947" />
                                 </a>
                             </div>
                         </div>
@@ -109,15 +110,15 @@
                     <div class="col-12 col-lg-6 add_to_cart_block">
                         <div class="card bg-light mb-3">
                             <div class="card-body">
-                                <p class="price">16,000.00 ₡</p>
-                                <p class="price_discounted">12,000.00 ₡</p>
+                                <p class="price"><?php echo $promo->precio; ?> ₡</p>
+                                <p><strong><?php echo $promo->descripcion; ?></strong></p>
                                 <form method="get" action="cart.html">
                                     <div class="form-group">
                                         <label for="colors">Sucursales</label>
                                         <select class="custom-select" id="colors">
                                             <option selected>Seleccionar</option>
                                             <option value="1">Ciudad Quesada</option>
-                                            <option value="2">La Fortuna</option>                                           
+                                            <option value="2">La Fortuna</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -147,12 +148,13 @@
                                         <li class="list-inline-item"><i class="fa fa-phone fa-2x"></i><br/>+506 2460-09-09</li>
                                     </ul>
                                 </div>
-                                                              
+
                             </div>
                         </div>
                     </div>
-				</div>               
-		</div> 
+				</div>
+				<?php } ?>
+		</div>
 	</div>
 </section>
 
@@ -174,14 +176,14 @@
 				<div class="wrap-col">
 					<h4>Ubicación</h4>
 					<div class="wrap-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0737095097943!2d-84.43382528520303!3d10.335986392621301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065858cca930d%3A0x1b05f1a343eb8f0f!2sPizza+Ranch+Ciudad+Quesada!5e0!3m2!1ses-419!2scr!4v1520782240628" width="100%" height="200" frameborder="0" style="border:0"></iframe>	
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0737095097943!2d-84.43382528520303!3d10.335986392621301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065858cca930d%3A0x1b05f1a343eb8f0f!2sPizza+Ranch+Ciudad+Quesada!5e0!3m2!1ses-419!2scr!4v1520782240628" width="100%" height="200" frameborder="0" style="border:0"></iframe>
 					</div>
 				</div>
 			</div>
 			<div class="col-1-3">
 				<div class="wrap-col">
-					<h4>Horario</h4>					
-					<p><span>Lunes a Domingo</span> 11:00 – 21:00</p>					
+					<h4>Horario</h4>
+					<p><span>Lunes a Domingo</span> 11:00 – 21:00</p>
 				</div>
 			</div>
 		</div>

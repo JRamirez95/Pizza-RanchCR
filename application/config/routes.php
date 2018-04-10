@@ -51,7 +51,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 */
 $route['Promos'] = 'home/promos';
 $route['listaPromociones'] = 'home/listaPromociones';
-$route['Promociones'] = 'home/promociones';
+$route['agregarPromociones'] = 'home/agregarPromociones';
 $route['cambiarContrasena'] = 'home/cambiarContrasena';
 $route['EditarPerfil'] = 'home/editarPerfil';
 $route['Puntos'] = 'home/puntos';

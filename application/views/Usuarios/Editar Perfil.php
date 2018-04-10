@@ -13,10 +13,10 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/zerogrid.css">        	
+    <link rel="stylesheet" href="css/zerogrid.css">
     <link rel="stylesheet" href="css/estilo-pUs.css">
 </head>
-<body>
+<body onload="cargarDatos()">
 
 
 	<!--///////////////////////////////////////Top-->
@@ -41,10 +41,9 @@
 			<center><div class="logo"><img src="images/logo.png"></div></center>
 		</div>
 	</header>
-  
 
+    <?php foreach ($usuario as $index=> $user) ?>
 
- 
         <nav class="navbar navbar-expand-lg">
 
             <div class="container-fluid d-flex align-items-center justify-content-between">
@@ -61,27 +60,27 @@
                 </ul>
             </div>
         </nav>
-    
+
+
     <div class="d-flex align-items-stretch">
 
         <nav id="sidebar">
             <div class="sidebar-header d-flex align-items-center">
             <div class="avatar center-block img-thumbnail" style="background-image: url(fotosPerfil/)"  alt="..."></div>
                 <div class="title">
-                   <h1>Jonathan</h1> <p>Ramirez</p>
-                    
+                  <p><?php echo $user->nombre, " ", $user->apellidos; ?></p>
                 </div>
 
             </div><span class="heading">Menu</span>
             <ul class="list-unstyled">
                 <li><a href="Perfil"><i class="fa fa-globe"></i>Presentación</a></li>
-                             
+
                 <li>
                     <a href="Puntos"> <i class="fas fa-trophy"></i>Mis Puntos</a>
                 </li>
                 <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"><i class="fas fa-tag"></i> Promociones </a>
                     <ul id="dashvariants" class="collapse list-unstyled">
-                        <li><a href="Promociones"> <i class="fas fa-plus"></i> Nueva Promoción</a></li>
+                        <li><a href="agregarPromociones"> <i class="fas fa-plus"></i> Nueva Promoción</a></li>
                         <li><a href="listaPromociones"> <i class="fas fa-clipboard-list"></i> Promociones</a></li>
                     </ul>
                 </li>
@@ -94,7 +93,7 @@
                 <li class="active">
                     <a href="EditarPerfil"> <i class="fas fa-pencil-alt"></i>Editar Perfil</a>
                 </li>
-                <li> 
+                <li>
                     <a href="cambiarContrasena"> <i class="fas fa-exchange-alt"></i>Cambiar Contraseña</a>
                 </li>
                 <li>
@@ -108,7 +107,7 @@
                 <div class="container-fluid">
                     <h2 class="h5 no-margin-bottom fa fa-globe"> Presentación</h2>
                 </div>
-            </div>          
+            </div>
                  <section class="no-padding-top">
                         <div class="container-fluid">
                             <div class="row">
@@ -118,14 +117,25 @@
                                             <strong>Edite su información</strong>
                                         </div>
                                         <div class="block-body">
-                                            <form method="POST" action="log/editar.php" enctype="multipart/form-data" class="form-horizontal">
+                                            <form method="POST" action="/Pizza-RanchCR/home/registrar" enctype="multipart/form-data" class="form-horizontal">
+                                                <div class="form-group row">
+                                                    <label class="col-sm-2 form-control-label">Cedula :</label>
+                                                    <div class="col-sm-6">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <span class="input-group-addon fa fa-user"></span>
+                                                                <input type="text" name="cedula" placeholder="" value="" class="form-control" id="editCedula">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 form-control-label">Nombre :</label>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon fa fa-user"></span>
-                                                                <input type="text" name="nombre" placeholder="" value="" class="form-control">
+                                                                <input type="text" name="nombre" placeholder="" value="" class="form-control"  id="editNombre">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -136,32 +146,19 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon fa fa-user"></span>
-                                                                <input type="text" name="apellido" placeholder="" value="" class="form-control">
+                                                                <input type="text" name="apellidos" placeholder="" value="" class="form-control"  id="editApellidos">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                </div>                                                
+                                                </div>
                                                 <div class="form-group row">
                                                     <label class="col-sm-2 form-control-label">Correo :</label>
                                                     <div class="col-sm-6">
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon fa fa-at"></span>
-                                                                <input type="email" disabled="" placeholder="" class="form-control">
+                                                                <input type="email" name="email" disabled="" placeholder="" class="form-control"  id="editCorreo">
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group row">
-                                                    <label class="col-sm-2 form-control-label">Sexo :</label>
-                                                    <div class="col-sm-8">
-                                                        <div>
-                                                            <input name="sexo" id="optionsRadios1" type="radio" value="Hombre" />
-                                                            <label for="optionsRadios1">Hombre</label>
-                                                        </div>
-                                                        <div>
-                                                            <input name="sexo" id="optionsRadios2" type="radio" value="Mujer"/>
-                                                            <label for="optionsRadios2">Mujer</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,7 +168,7 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon fa fa-phone"></span>
-                                                                <input type="tel" name="telefono" placeholder="" value="" class="form-control">
+                                                                <input type="tel" name="telefono" placeholder="" value="" class="form-control"  id="editTelefono">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -182,7 +179,7 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon fas fa-map-signs"> Lat</span>
-                                                                <input type="tel" name="telefono" placeholder="" value="" class="form-control">
+                                                                <input type="tel" name="lat" placeholder="" value="" class="form-control" id="lat">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -190,7 +187,7 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon fas fa-map-signs"> Lng</span>
-                                                                <input type="tel" name="telefono" placeholder="" value="" class="form-control">
+                                                                <input type="tel" name="lng" placeholder="" value="" class="form-control" id="lng">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -209,7 +206,7 @@
                                                         <div class="form-group">
                                                             <div class="input-group">
                                                                 <span class="input-group-addon far fa-compass"></span>
-                                                                <textarea name="telefono" placeholder="" value="" class="form-control"></textarea>
+                                                                <textarea name="direccion" placeholder="" value="" class="form-control"  id="editDireccion"></textarea>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -241,7 +238,7 @@
                     </section>
         </div>
     </div>
-    
+
     <!-- modal -->
 <div id="fsModal"
      class="modal animated bounceIn"
@@ -264,20 +261,16 @@
         </h1>
       </div>
       <!-- header -->
-      
+
       <!-- body -->
       <div class="modal-body">
-        <h2>1. Modal sub-title</h2>
+          
+          <div id="map">
+            <script async defer
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVDzvvE7UhvRLQXBbsbr4ILGTqrIt50EA&callback=initMap">
+            </script>
+          </div>
 
-        <p>Liquor ipsum dolor sit amet bearded lady, grog murphy's bourbon lancer. Kamikaze vodka gimlet; old rip van winkle, lemon drop martell salty dog tom collins smoky martini ben nevis man o'war. Strathmill grand marnier sea breeze b & b mickey slim. Cactus jack aberlour seven and seven, beefeater early times beefeater kalimotxo royal arrival jack rose. Cutty sark scots whisky b & b harper's finlandia agent orange pink lady three wise men gin fizz murphy's. Chartreuse french 75 brandy daisy widow's cork 7 crown ketel one captain morgan fleischmann's, hayride, edradour godfather. Long island iced tea choking hazard black bison, greyhound harvey wallbanger, "gibbon kir royale salty dog tonic and tequila."</p>
-
-        <h2>2. Modal sub-title</h2>
-
-        <p>The last word drumguish irish flag, hurricane, brandy manhattan. Lemon drop, pulteney fleischmann's seven and seven irish flag pisco sour metaxas, hayride, bellini. French 75 wolfram christian brothers, calvert painkiller, horse's neck old bushmill's gin pahit. Monte alban glendullan, edradour redline cherry herring anisette godmother, irish flag polish martini glen spey. Abhainn dearg bloody mary amaretto sour, ti punch black cossack port charlotte tequila slammer? Rum swizzle glen keith j & b sake bomb harrogate nights 7 crown! Hairy virgin tomatin lord calvert godmother wolfschmitt brass monkey aberfeldy caribou lou. Macuá, french 75 three wise men.</p>
-
-        <h2>3. Modal sub-title</h2>
-
-        <p>Pisco sour daiquiri lejon bruichladdich mickey slim sea breeze wolfram kensington court special: pink lady white lady or delilah. Pisco sour glen spey, courvoisier j & b metaxas glenlivet tormore chupacabra, sambuca lorraine knockdhu gin and tonic margarita schenley's." Bumbo glen ord the macallan balvenie lemon split presbyterian old rip van winkle paradise gin sling. Myers black bison metaxa caridan linkwood three wise men blue hawaii wine cooler?" Talisker moonwalk cosmopolitan wolfram zurracapote glen garioch patron saketini brandy alexander, singapore sling polmos krakow golden dream. Glenglassaugh usher's wolfram mojito ramos gin fizz; cactus jack. Mai-tai leite de onça bengal; crown royal absolut allt-á-bhainne jungle juice bacardi benrinnes, bladnoch. Cointreau four horsemen aultmore, "the amarosa cocktail vodka gimlet ardbeg southern comfort salmiakki koskenkorva."</p>
 
       </div>
       <!-- body -->
@@ -305,12 +298,24 @@
 
 </div>
 <!-- modal -->
-    
-
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script> 
-    <script src="css/js/bootstrap.min.js"></script>   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script src="css/js/bootstrap.min.js"></script>
     <script src="js/usuario.js"></script>
+    <script src="js/map.js"></script>
+    <script type="text/javascript">
+        function cargarDatos(){
+          var datos =  <?php echo json_encode($usuario,JSON_FORCE_OBJECT); ?>;
+          document.getElementById('editCedula').value=datos[0]['cedula'];
+          document.getElementById('editNombre').value=datos[0]['nombre'];
+          document.getElementById('editApellidos').value=datos[0]['apellidos'];
+          document.getElementById('editCorreo').value=datos[0]['email'];
+          document.getElementById('editTelefono').value=datos[0]['telefono'];
+          document.getElementById('editDireccion').value=datos[0]['direccion'];
+          document.getElementById('lat').value=datos[0]['lat'];
+          document.getElementById('lng').value=datos[0]['lng'];
+        }
+    </script>
 </body>
 
 </html>

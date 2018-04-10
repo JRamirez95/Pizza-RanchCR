@@ -1,23 +1,16 @@
-<?php
+  <?php
 class Ranch_model extends CI_Model {
 
     function registrar($usuario)
     {
-        $email = $usuario ['email'];        
-        $ced = $usuario ['cedula'];      
-        
-        // $this->db->select('cedula');
-        // $this->db->from('clientes');
-        // $this->db->where('cedula', $ced);
-        // $query = $this->db->get('clientes')->row();
-        
-        $query = $this->db->query("SELECT * FROM usuario");        
+        $email = $usuario ['email'];
+        $ced = $usuario ['cedula'];
+
+        $query = $this->db->query("SELECT * FROM usuario");
         $row = $query->row();
         $email1 = $row->email;
         $ced1 = $row->cedula;
 
-        // echo $email1; die; 
-        
         if ($ced == $ced1){
             echo "<script> alert('El número de cedula ya esta registrado');</script>";
 
@@ -28,28 +21,87 @@ class Ranch_model extends CI_Model {
             $r = $this->db->insert('usuario', $usuario);
             return $r;
         }
-      
+
     }
 
-    function inicioSesion($email, $contrasena) {   
+    function all($id)
+  	{
+    	//$query = $this -> db -> get('usuario');
+      $this -> db -> select('*');
+  		$this -> db -> from('usuario');
+  		$this -> db -> where('id', $id);
+      $query = $this -> db -> get();
 
-        $query = $this->db->query("SELECT * FROM usuario WHERE email= '".$email."'");
-        $row = $query->num_rows();
-		// $this -> db -> from('clientes');
-		// $this -> db -> where('email', $email);
-		// $this -> db -> where('password', $pass);
-		// $this -> db -> limit(1);
-       
-		$query = $this -> db -> get();
+    	return $query->result_object();
+  	}
 
-		if($query -> num_rows() == 1)
-		{
-		return true;
-		}
-		else
-		{
-		return false;
-		}    
-	}
+    function cargarPromos()
+    {
+      $query = $this -> db -> get('promos');
+      return $query->result_object();
+    }
+
+    function inicioSesion($email, $contrasena) {
+
+      $this -> db -> select('id');
+  		$this -> db -> from('usuario');
+  		$this -> db -> where('email', $email);
+  		$this -> db -> where('contrasena', $contrasena);
+  		//$this -> db -> limit(1);
+
+  		$query = $this -> db -> get();
+
+  		if($query -> num_rows() == 1)
+  		{
+      $usuario = $query->result();
+      $usuario = json_decode(json_encode($usuario), True);
+      return $usuario;
+  		//return $query;
+  		}
+  		else
+  		{
+  		return false;
+  		}
+    }
+
+    function editarUsuario($cedula, $nombre, $apellidos, $email, $direccion, $tel, $id) {
+        $data = array(
+          'cedula' => $cedula,
+    			'nombre' => $nombre,
+    			'apellidos' => $apellidos,
+    			'email' => $email,
+    			'contrasena' => $contrasena,
+    			'lat' => $lat,
+    			'lng' => $lng,
+    			'direccion' => $direccion,
+    			'telefono' => $tel
+
+        );
+
+        // $this->db->update('usser', $data);
+        $this->db->where('id', $id);
+        $this->db->update('usuario', $data);
+
+    }
+
+    function agregarPromo($promo)
+    {
+        $descripcion = $promo ['descripcion'];
+
+        $query = $this->db->query("SELECT * FROM promos");
+        $row = $query->row();
+        $desc = $row->descripcion;
+
+
+        if ($descripcion == $desc){
+            echo "<script> alert('La promoción ya esta registrado');</script>";
+
+        }else{
+            $r = $this->db->insert('promos', $promo);
+            return $r;
+        }
+
+    }
+
 
 }

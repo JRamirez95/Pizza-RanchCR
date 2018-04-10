@@ -1,4 +1,6 @@
-
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?>
 <!DOCTYPE html>
 <html>
 
@@ -13,7 +15,7 @@
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/zerogrid.css">        	
+    <link rel="stylesheet" href="css/zerogrid.css">
     <link rel="stylesheet" href="css/estilo-pUs.css">
 </head>
 <body>
@@ -41,12 +43,8 @@
 			<center><div class="logo"><img src="images/logo.png"></div></center>
 		</div>
 	</header>
-  
-
-
- 
+        <?php foreach ($usuario as $index=> $user) ?>
         <nav class="navbar navbar-expand-lg">
-
             <div class="container-fluid d-flex align-items-center justify-content-between">
                 <div class="navbar-header">
                     <a href="principalUsuarios.php" class="navbar-brand">
@@ -61,45 +59,31 @@
                 </ul>
             </div>
         </nav>
-    
+
     <div class="d-flex align-items-stretch">
 
         <nav id="sidebar">
             <div class="sidebar-header d-flex align-items-center">
             <div class="avatar center-block img-thumbnail" style="background-image: url(fotosPerfil/)"  alt="..."></div>
                 <div class="title">
-                   <h1>Jonathan</h1> <p>Ramirez</p>
-                    
+                   <p><?php echo $user->nombre," ",$user->apellidos; ?></p>
                 </div>
 
             </div><span class="heading">Menu</span>
             <ul class="list-unstyled">
                 <li class="active"><a href="Perfil"><i class="fa fa-globe"></i>Presentación</a></li>
-                             
-                <li>
-                    <a href="Puntos"> <i class="fas fa-trophy"></i>Mis Puntos</a>
-                </li>
+                <li><a href="Puntos"> <i class="fas fa-trophy"></i>Mis Puntos</a></li>
                 <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"><i class="fas fa-tag"></i> Promociones </a>
                     <ul id="dashvariants" class="collapse list-unstyled">
-                        <li><a href="Promociones"> <i class="fas fa-plus"></i> Nueva Promoción</a></li>
+                        <li><a href="agregarPromociones"> <i class="fas fa-plus"></i> Nueva Promoción</a></li>
                         <li><a href="listaPromociones"> <i class="fas fa-clipboard-list"></i> Promociones</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href=""> <i class="fas fa-info-circle"></i> Información</a>
-                </li>
-                 <li>
-                    <a href=""> <i class="far fa-calendar-alt"></i> Horario</a>
-                </li>
-                <li>
-                    <a href="EditarPerfil"> <i class="fas fa-pencil-alt"></i>Editar Perfil</a>
-                </li>
-                <li> 
-                    <a href="cambiarContrasena"> <i class="fas fa-exchange-alt"></i>Cambiar Contraseña</a>
-                </li>
-                <li>
-                    <a href="cerrarSesion"> <i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
-                </li>
+                <li><a href=""> <i class="fas fa-info-circle"></i> Información</a></li>
+                 <li><a href=""> <i class="far fa-calendar-alt"></i> Horario</a></li>
+                <li><a href="EditarPerfil"> <i class="fas fa-pencil-alt"></i>Editar Perfil</a></li>
+                <li><a href="cambiarContrasena"> <i class="fas fa-exchange-alt"></i>Cambiar Contraseña</a></li>
+                <li><a href="cerrarSesion"> <i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a></li>
             </ul>
         </nav>
 
@@ -108,10 +92,10 @@
                 <div class="container-fluid">
                     <h2 class="h5 no-margin-bottom fa fa-globe"> Presentación</h2>
                 </div>
-            </div>          
+            </div>
             <section class="no-padding-top">
-                <div class="container-fluid">                    
-                    <div class="row">                   
+                <div class="container-fluid">
+                    <div class="row">
                         <div class="col-lg-12">
                             <div class="block">
                                 <div class="title">
@@ -122,47 +106,45 @@
                                         <div class="form-group row">
                                             <label class="col-sm-2 form-control-label">Nombre :</label>
                                             <div class="col-sm-6">
-                                                <label>Jonathan Ramírez</label>
+                                                <label><?php echo $user->nombre," ",$user->apellidos; ?></label>
                                             </div>
                                         </div>
-                                         <div class="form-group row">
-                                        <label class="col-sm-2 form-control-label">Email :</label>
-                                            <div class="col-sm-6">
-                                                <label>jona@gmail.com</label>
-                                            </div>
+                                        <div class="form-group row">
+                                          <label class="col-sm-2 form-control-label">Email :</label>
+                                              <div class="col-sm-6">
+                                                  <label><?php echo $user->email; ?></label>
+                                              </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-2 form-control-label">Dirección :</label>
                                             <div class="col-sm-6">
-                                                <label>100 metros este</label>
+                                                <label><?php echo $user->direccion; ?></label>
                                             </div>
                                         </div>
                                          <div class="form-group row">
                                             <label class="col-sm-2 form-control-label">Teléfono :</label>
                                             <div class="col-sm-6">
-                                                <label>70464375</label>
+                                                <label><?php echo $user->telefono; ?></label>
                                             </div>
                                         </div>
                                         <div class="form-group row">
                                             <label class="col-sm-2 form-control-label">Mis Puntos :</label>
-                                                <div class="col-sm-6">                                                    
-                                                    <label>1500 PTS</label>                                                   
+                                                <div class="col-sm-6">
+                                                    <label>1500 PTS</label>
                                                 </div>
-                                        </div>                                                                              
+                                        </div>
                                     </form>
                                 </div>
                             </div>
-                        </div> 
-                    </div>         
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
     </div>
-    
-    
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="css/js/bootstrap.min.js"></script>
     <script src="js/usuario.js"></script>
 </body>

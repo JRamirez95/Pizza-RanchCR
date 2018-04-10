@@ -25,7 +25,7 @@ $(function () {
     });
     $('.dropdown').on('hide.bs.dropdown', function () {
         $(this).find('.dropdown-menu').first().stop(true, true).fadeOut(100).removeClass('active');
-    }); 
+    });
 
 
     // ------------------------------------------------------- //
@@ -93,7 +93,7 @@ $('body').noisy({
     randomColors: false, // true by default
     color: '#000000'
 });
-  
+
 	//Google Maps JS
 	//Set Map
 	function initialize() {
@@ -137,5 +137,3 @@ $('body').noisy({
 	google.maps.event.addDomListener(window, 'load', initialize);
 
 });
-
-

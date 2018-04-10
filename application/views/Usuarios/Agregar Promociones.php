@@ -5,13 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Lista Promociones</title>
+    <title>Promociones</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
 
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 
     <link rel="stylesheet" href="css/zerogrid.css">
@@ -55,7 +54,7 @@
                 </div>
 
                 <ul class="right-menu list-inline no-margin-bottom">
-                    <li class="list-inline-item logout"><a id="logout" href="cerrarSesion.php" class="nav-link">Cerrar Sesion <i class="fas fa-sign-out-alt"></i></a></li>
+                    <li class="list-inline-item logout"><a id="logout" href="cerrarSesion.php" class="nav-link">Cerrar Sesion <i class="fa fa-sign-out"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -71,15 +70,15 @@
 
             </div><span class="heading">Menu</span>
             <ul class="list-unstyled">
-                <li><a href="Perfil"><i class="fas fa-globe"></i> Presentación</a></li>
+                <li><a href="Perfil"><i class="fa fa-globe"></i>Presentación</a></li>
 
                 <li>
-                    <a href="Puntos"> <i class="fas fa-trophy"></i> Mis Puntos</a>
+                    <a href="Puntos"> <i class="fas fa-trophy"></i>Mis Puntos</a>
                 </li>
                 <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"><i class="fas fa-tag"></i> Promociones </a>
                     <ul id="dashvariants" class="collapse list-unstyled">
-                        <li><a href="agregarPromociones"> <i class="fas fa-plus"></i> Nueva Promoción</a></li>
-                        <li class="active"><a href="listaPromociones"> <i class="fas fa-clipboard-list"></i> Promociones</a></li>
+                        <li class="active"><a href="agregarPromociones"> <i class="fas fa-plus"></i> Nueva Promoción</a></li>
+                        <li><a href="listaPromociones"> <i class="fas fa-clipboard-list"></i> Promociones</a></li>
                     </ul>
                 </li>
                 <li>
@@ -89,13 +88,13 @@
                     <a href=""> <i class="far fa-calendar-alt"></i> Horario</a>
                 </li>
                 <li>
-                    <a href="EditarPerfil"> <i class="fas fa-pencil-alt"></i> Editar Perfil</a>
+                    <a href="EditarPerfil"> <i class="fas fa-pencil-alt"></i>Editar Perfil</a>
                 </li>
                 <li>
-                    <a href="cambiarContrasena"> <i class="fas fa-exchange-alt"></i> Cambiar Contraseña</a>
+                    <a href="cambiarContrasena"> <i class="fas fa-exchange-alt"></i>Cambiar Contraseña</a>
                 </li>
                 <li>
-                    <a href="cerrarSesion"> <i class="fas fa-sign-out-alt"></i> Cerrar Sesion</a>
+                    <a href="cerrarSesion"> <i class="fas fa-sign-out-alt"></i>Cerrar Sesion</a>
                 </li>
             </ul>
         </nav>
@@ -103,52 +102,44 @@
         <div class="page-content">
             <div class="page-header">
                 <div class="container-fluid">
-                    <h2 class="h5 no-margin-bottom"><i class="fas fa-globe"></i> Presentación</h2>
+                    <h2 class="h5 no-margin-bottom fa fa-globe"> Presentación</h2>
                 </div>
             </div>
-               <section class="no-padding-top">
+                <section class="no-padding-top">
                         <div class="container-fluid">
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="block">
                                         <div class="title">
-                                            <strong>Promociones</strong>
+                                            <strong>Agregar nueva promoción</strong>
                                         </div>
-                                        <div class="block-body">
-                                            <div class="container mb-4">
-                                                <div class="row">
-                                                    <div class="col-12">
-                                                        <div class="table-responsive">
-                                                            <table class="table table-striped">
-                                                                <thead>
-                                                                    <tr>
-                                                                        <th scope="col">Imagen</th>
-                                                                        <th scope="col">Descripción</th>
-                                                                        <th scope="col" class="text-right">Precio</th>
-                                                                        <th> </th>
-                                                                    </tr>
-                                                                </thead>
-                                                                <?php foreach ($promos as $index=> $promo){ ?>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td><img src="images/promo.jpg" /> </td>
-                                                                        <td><?php echo $promo->descripcion; ?></td>
-                                                                        <td class="text-right">₡ <?php echo $promo->precio; ?></td>
-                                                                        <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
-                                                                    </tr>
-                                                                </tbody>
-                                                                <?php } ?>
-                                                            </table>
-                                                        </div>
+                                        <div class="col-md-6">
+                                            <form method="post" action="/Pizza-RanchCR/home/agregarPromo" enctype="multipart/form-data">
+                                                <div class="form-group">
+                                                    <label>Descripción</label>
+                                                    <textarea name="descripcion" class="form-control"></textarea>
+                                                </div>
+                                                 <div class="form-group">
+                                                    <label>Precio</label>
+                                                    <input name="precio" type="number" class="form-control">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Subir foto</label>
+                                                    <input name="userfile" type="file" class="form-control">
+                                                </div>
+                                                  <div class="form-group row">
+                                                <div class="col-sm-9 ml-auto">
+                                                    <button type="submit" class="btn btn-primary">Agregar</button>
+                                                    <button type="reset" class="btn btn-secondary">Cancelar</button>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </form>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                </section>
         </div>
     </div>
 

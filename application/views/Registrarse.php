@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -8,12 +8,12 @@
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Registrarse</title>	
-	
+	<title>Registrarse</title>
+
     <!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    
+
     <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -34,7 +34,7 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
-     
+
 </head>
 <body>
 <div class="wrap-body">
@@ -62,9 +62,9 @@
 	</header>
 	<div class="site-title">
 		<div class="zerogrid">
-			
+
 				<h2 class="t-center">Invitado</h2>
-			
+
 		</div>
 	</div>
     <!--//////////////////////////////////////Menu-->
@@ -81,12 +81,12 @@
 			<li class="colour-8"><a href="Login">Iniciar Sesión</a></li>
 		</ul>
     </nav>
-	
+
 <!--////////////////////////////////////Container-->
 <section id="container" class="sub-page">
 	<div class="wrap-container zerogrid">
 		<div class="crumbs">
-			<h2 class="t-center">REGISTRARSE</h2>	
+			<h2 class="t-center">REGISTRARSE</h2>
 			<!-- <ul>
 				<li><a href="Home">Inicio</a></li>
 				<li><a href="Login">Iniciar Sesión</a></li>
@@ -94,7 +94,7 @@
 		</div>
 		<div id="main-content">
 			<div class="wrap-content">
-				<div class="row">					
+				<div class="row">
 					<div class="col-2-4">
 						<div class="wrap-col">
 							<div class="contact">
@@ -107,14 +107,14 @@
 													<input type="number" name="cedula" id="cedula" placeholder="Cedula *" required="required" />
 												</div>
                                             </div>
-                                        </label>   
+                                        </label>
 
 										<label class="row">
 											<div class="col-1-1">
 												<div class="wrap-col">
 													<input type="text" name="nombre" id="nombre" placeholder="Nombre *" required="required" />
 												</div>
-                                            </div>                                   
+                                            </div>
                                         </label>
 
                                         <label class="row">
@@ -140,7 +140,7 @@
 												</div>
 											</div>
                                         </label>
-                                        
+
                                         <label class="row">
                                             <div class="col-1-1">
 												<div class="wrap-col">
@@ -164,37 +164,37 @@
 												</div>
 											</div>
                                         </label>
-                                        
+
                                         <label class="row">
                                             <div class="col-1-1">
 												<div class="wrap-col">
 													<input type="password" name="contrasena1" id="contrasena1" placeholder="Repetir Contraseña *" required="required" />
 												</div>
 											</div>
-                                        </label> 
-											
+                                        </label>
+
 										<label class="row">
-                                            
+
 												<div class="wrap-col">
                                                     <div id="map">
                                                         <script async defer
                                                             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVDzvvE7UhvRLQXBbsbr4ILGTqrIt50EA&callback=initMap">
                                                         </script>
-													</div>																	
-                                                </div>
-											
+													</div>
+                          </div>
+
 												<div class="col-1-3">
 													<div class="wrap-col">
 														<label for="lat">Latitud</label>
 														<input type="text" name="lat" id="lat" readonly>
 													</div>
-												</div>	
+												</div>
 												<div class="col-1-3">
-													<div class="wrap-col">	
+													<div class="wrap-col">
 														<label for="lng">Longitud</label>
 														<input type="text" name="lng" id="lng" readonly>
 													</div>
-												</div>	
+												</div>
 											<!-- <div class="col-1-3">
 												<div class="wrap-col">
 												<select type="text" name="subject" id="subject" required="required">
@@ -217,20 +217,20 @@
 												</div>
 											</div>											 -->
                                         </label>
-                                        
+
 										<label class="row">
 											<div class="wrap-col">
 												<textarea name="direccion" id="message" class="form-control" rows="4" cols="25" required="required"
 												placeholder="Dirección exacta con señas"></textarea>
 											</div>
-                                        </label>                                        
-                                        
+                                        </label>
+
                                         <label class="custom-control custom-checkbox">
                                             <input type="checkbox" id="" class="custom-control-input" checked required>
                                             <span class="custom-control-indicator"></span>
                                             <span class="custom-control-description">Acepto las condiciones de uso y entiendo que mi información será utilizada como se describe en la Política de privacidad de Pizza Ranch.</span>
                                         </label>
-                                        
+
                                         <label class="custom-control custom-checkbox">
                                             <input type="checkbox" id="" class="custom-control-input" checked required>
                                             <span class="custom-control-indicator"></span>
@@ -263,12 +263,12 @@
                                 <input type="checkbox" class="custom-control-input" checked>
                                 <span class="custom-control-indicator"></span>
                                 <span class="custom-control-description">Acepto recibir mensajes de correo electrónico, promociones y ofertas especiales de Pizza Ranch.</span>
-                            </label>							
+                            </label>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
 	</div>
 </section>
 
@@ -290,14 +290,14 @@
 				<div class="wrap-col">
 					<h4>Ubicación</h4>
 					<div class="wrap-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0737095097943!2d-84.43382528520303!3d10.335986392621301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065858cca930d%3A0x1b05f1a343eb8f0f!2sPizza+Ranch+Ciudad+Quesada!5e0!3m2!1ses-419!2scr!4v1520782240628" width="100%" height="200" frameborder="0" style="border:0"></iframe>	
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0737095097943!2d-84.43382528520303!3d10.335986392621301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065858cca930d%3A0x1b05f1a343eb8f0f!2sPizza+Ranch+Ciudad+Quesada!5e0!3m2!1ses-419!2scr!4v1520782240628" width="100%" height="200" frameborder="0" style="border:0"></iframe>
 					</div>
 				</div>
 			</div>
 			<div class="col-1-3">
 				<div class="wrap-col">
-					<h4>Horario</h4>					
-					<p><span>Lunes a Domingo</span> 11:00 – 21:00</p>					
+					<h4>Horario</h4>
+					<p><span>Lunes a Domingo</span> 11:00 – 21:00</p>
 				</div>
 			</div>
 		</div>
@@ -312,10 +312,10 @@
 		</div>
 	</div>
 </footer>
-   
+
     <script src="js/map.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
-	
+
 </div>
 </body></html>

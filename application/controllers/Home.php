@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Home extends CI_Controller {
 
 	function __construct(){
-    parent:: __construct();    
+    parent:: __construct();
     }
 
 	public function home()
@@ -21,7 +21,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('Sucursales');
 	}
-	
+
 		public function registrarse()
 	{
 		$this->load->view('Registrarse');
@@ -34,7 +34,10 @@ class Home extends CI_Controller {
 
 		public function perfil()
 	{
-		$this->load->view('Perfil');
+		$usser = $this->Ranch_model->all($_SESSION["pizza_ranch"]);
+		$data['usuario'] = $usser;
+
+		$this->load->view('Perfil', $data);
 	}
 
 		public function galeria()
@@ -44,32 +47,45 @@ class Home extends CI_Controller {
 
 		public function promos()
 	{
-		$this->load->view('Promociones');
+		$promos = $this->Ranch_model->cargarPromos();
+		$data['promos'] = $promos;
+		$this->load->view('Promociones', $data);
 	}
 
 		public function puntos()
 	{
-		$this->load->view('Usuarios/Puntos');
+		$usser = $this->Ranch_model->all($_SESSION["pizza_ranch"]);
+		$data['usuario'] = $usser;
+		$this->load->view('Usuarios/Puntos', $data);
 	}
-
 		public function editarPerfil()
 	{
-		$this->load->view('Usuarios/Editar Perfil');
-	}
-	
-		public function cambiarContrasena()
-	{
-		$this->load->view('Usuarios/Cambiar Contraseña');
+		$usser = $this->Ranch_model->all($_SESSION["pizza_ranch"]);
+		$data['usuario'] = $usser;
+		$this->load->view('Usuarios/Editar Perfil', $data);
 	}
 
-		public function promociones()
+		public function cambiarContrasena()
 	{
-		$this->load->view('Usuarios/Promociones');
+		$usser = $this->Ranch_model->all($_SESSION["pizza_ranch"]);
+		$data['usuario'] = $usser;
+		$this->load->view('Usuarios/Cambiar Contraseña', $data);
+	}
+
+		public function agregarPromociones()
+	{
+		$usser = $this->Ranch_model->all($_SESSION["pizza_ranch"]);
+		$data['usuario'] = $usser;
+		$this->load->view('Usuarios/Agregar Promociones', $data);
 	}
 
 		public function listaPromociones()
 	{
-		$this->load->view('Usuarios/Lista Promociones');
+		$usser = $this->Ranch_model->all($_SESSION["pizza_ranch"]);
+		$promos = $this->Ranch_model->cargarPromos();
+		$data['usuario'] = $usser;
+		$data['promos'] = $promos;
+		$this->load->view('Usuarios/Lista Promociones', $data);
 	}
 
 
@@ -88,18 +104,18 @@ class Home extends CI_Controller {
 		$direccion = $this->input->post('direccion');
 		$tel = $this->input->post('telefono');
 
-		if ($email != $confEmail) 
+		if ($email != $confEmail)
 		{
 			?><script type=text/javascript>alert("Email no coinciden");</script><?php
 			// redirect('/Pizza-RanchCR/Home');
 		}else if ($contrasena != $confContra) {
-			
+
 			echo "<script> alert('Las contraseñas no coinciden');</script>";
 			// redirect('Pizza-RanchCR/Registrarse', 'refresh');
-			
+
 		}else
-		{	
-		
+		{
+
 			$usuario = array(
 				'cedula' => $cedula,
 				'nombre' => $nombre,
@@ -113,7 +129,7 @@ class Home extends CI_Controller {
 			);
 			// call the model to save
 			$r = $this->Ranch_model->registrar($usuario);
-			
+
 			// redirect
 			if ($r) {
 				// $this->session->set_flashdata('message', 'User saved');
@@ -124,10 +140,10 @@ class Home extends CI_Controller {
 			//    $this->session->set_flashdata('message', 'There was an error saving the user');
 				// redirect('/Mypetscr/CodeIgniter-3.1.6/user/register');
 			}
-		
+
 		}
 	}
-	  
+
 	public function inicioSesion()
     {
         $email = $this->input->post('email');
@@ -136,13 +152,85 @@ class Home extends CI_Controller {
 
        $r = $this->Ranch_model->inicioSesion($email, $contrasena);
 
-        if ($r == true) {
-            // $this->session->set_flashdata('message', 'User saved');
-				redirect('/Pizza-RanchCR/Perfil');
-				?><script type=text/javascript>alert("Bienvenido");</script><?php   
+        if ($r != false) {
+            //  $this->session->set_flashdata('message', 'User saved');
+						session_start();
+						$_SESSION["pizza_ranch"] = $r[0]['id'];
+						redirect('/Pizza-RanchCR/Perfil');
+
         } else {
             // $this->session->set_flashdata('message', 'There was an error saving the user');
             ?><script type=text/javascript>alert("Credenciales Incorrectos");</script><?php
         }
+	}
+
+	 public function editar()
+    {
+		// get the params
+        $cedula = $this->input->post('cedula');
+				$nombre = $this->input->post('nombre');
+				$apellidos = $this->input->post('apellidos');
+				$email = $this->input->post('email');
+				$contrasena = $this->input->post('contrasena');
+				// $lat = $this->input->post('lat');
+				// $lng = $this->input->post('lng');
+				$direccion = $this->input->post('direccion');
+				$tel = $this->input->post('telefono');
+        $id = $this->input->get('id');
+
+         echo $cedula, $nombre, $apellidos, $email, $contrasena, $direccion, $tel, $id;
+
+				// call the model to save
+				$r = $this->User_model->editarUsuario($cedula, $nombre, $apellidos, $email, $contrasena, $direccion, $tel, $id);
+
+       redirect('/Pizza-RanchCR/Perfil');
+
     }
+
+		public function agregarPromo()
+	    {
+			// get the params
+			$descripcion = $this->input->post('descripcion');
+			$precio = $this->input->post('precio');
+			//Get image
+			$config['upload_path'] = './uploads_promos/';
+			$config['allowed_types'] = 'jpg|jpeg';
+			$this->load->library('upload', $config);
+			$this->upload->initialize($config);
+			if (!$this->upload->do_upload('userfile')) {
+				$error_foto =$this->upload->display_errors();
+				//echo  $error_foto;
+				//die();
+				//$this->load->view('welcome_message',$error_foto);
+			}
+			$file_data = $this->upload->data();
+			$foto = $file_data['file_name'];
+			if ($precio <= 0)
+			{
+				?><script type=text/javascript>alert("El precio debe ser mayor a 0");</script><?php
+				// redirect('/Pizza-RanchCR/Home');
+			}else
+			{
+
+				$promo = array(
+					'descripcion' => $descripcion,
+					'precio' => $precio,
+					'foto' => $foto
+				);
+				// call the model to save
+				$r = $this->Ranch_model->agregarPromo($promo);
+
+				// redirect
+				if ($r) {
+					// $this->session->set_flashdata('message', 'User saved');
+					?><script type=text/javascript>alert("Se ha registrado exitosamente...! Gracias por preferirnos.");</script><?php
+					redirect('/Pizza-RanchCR/listaPromociones');
+				} else {
+				//    $this->session->set_flashdata('message', 'There was an error saving the user');
+					// redirect('/Mypetscr/CodeIgniter-3.1.6/user/register');
+				}
+
+			}
+		}
+
 }
