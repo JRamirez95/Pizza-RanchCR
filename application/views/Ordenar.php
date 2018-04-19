@@ -8,12 +8,12 @@
     <!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title>Ordenar</title>	
-	
+	<title>Ordenar</title>
+
     <!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <!-- CSS
   ================================================== -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
@@ -21,15 +21,15 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
 	<link rel="stylesheet" href="css/menu.css">
-  
+
 	<!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    
+
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <link rel="stylesheet" href="css/ordenar.css">
-   
+
 </head>
 <body>
 <div class="wrap-body">
@@ -76,7 +76,7 @@
 			<li class="colour-8"><a href="gallery.html">Iniciar Sesión</a></li>
 		</ul>
     </nav>
-	
+
 <!--////////////////////////////////////Container-->
 <body>
 <section id="container" class="sub-page">
@@ -89,7 +89,7 @@
 		</div>
 		<div id="main-content">
 			<div class="wrap-content">
-				
+
     <!--  pizzas -->
 			<div class="col-1-3">
 						<div class="wrap-col">
@@ -113,13 +113,13 @@
                             <img src="images/Pastas/pastass.jpg">
 							<hr><h2>Pastas</h2>
                             </a></div></div>
-			
+
 <br><br>
 			<!--  pizzasxmitades -->
 			<div class="col-1-3">
 						<div class="wrap-col">
                             <a class="btn btn-default" href="PizzaMitades">
-                            <img src="images/PizzasxMitades/pizzasxmitades.jpg">
+                            <img src="images/Pizzas X Mitades/pizzasxmitades.jpg">
 							<hr><h2>Pizzas por mitades</h2>
 							</a>
 							</div> </div>
@@ -160,18 +160,18 @@
 							</a>
 							</div> </div>
                             </div>
-                            </div>						
+                            </div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div> 
+		</div>
 	</div>
 </section>
 
 <!--////////////////////////////////////Footer-->
 <footer class="zerogrid">
-	
+
 	<div class="copyright">
 		<center><div class="wrapper">
 			Copyright 2018 - Diseñado por <a href="m">JAKADESIGN</a>
@@ -187,6 +187,6 @@
 
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>
-	
+
 </div>
 </body></html>
