@@ -9,14 +9,14 @@
   ================================================== -->
 	<meta charset="utf-8">
 	<title>Pizza Ranch-CR</title>
-	
+
     <!-- Mobile Specific Metas
   ================================================== -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
+
     <!-- CSS
   ================================================== -->
-  
+
   	<link rel="stylesheet" href="css/zerogrid.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slide.css">
@@ -34,7 +34,7 @@
 		<script src="js/html5.js"></script>
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
-    
+
 </head>
 <body>
 <div class="wrap-body">
@@ -76,12 +76,12 @@
 			<li class="colour-3"><a href="Sucursales">Sucursales</a></li>
 			<li class="colour-4"><a href="Promos">Promociones</a></li>
 			<li class="colour-5"><a href="Galeria">Galería</a></li>
-			<li class="colour-6"><a href="staff.html">Ordenar</a></li>
+			<li class="colour-6"><a href="Ordenar">Ordenar</a></li>
 			<li class="colour-7"><a href="Registrarse">Registrarse</a></li>
 			<li class="colour-8"><a href="Login">Iniciar Sesión</a></li>
 		</ul>
     </nav>
-	
+
 	<div class="zerogrid">
 		<div class="callbacks_container">
 			<ul class="rslides" id="slider4">
@@ -93,15 +93,15 @@
 					</div> -->
 				</li>
 				<li>
-					<img src="images/2.jpg" alt="">					
+					<img src="images/2.jpg" alt="">
 				</li>
 				<li>
-					<img src="images/3.jpg" alt="">					
+					<img src="images/3.jpg" alt="">
 				</li>
 			</ul>
 		</div>
 	</div>
-	
+
 <!--////////////////////////////////////Container-->
 <section id="container" class="index-page">
 	<div class="wrap-container zerogrid">
@@ -211,14 +211,14 @@
 				<div class="wrap-col">
 					<h4>Ubicación</h4>
 					<div class="wrap-map">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0737095097943!2d-84.43382528520303!3d10.335986392621301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065858cca930d%3A0x1b05f1a343eb8f0f!2sPizza+Ranch+Ciudad+Quesada!5e0!3m2!1ses-419!2scr!4v1520782240628" width="100%" height="200" frameborder="0" style="border:0"></iframe>	
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.0737095097943!2d-84.43382528520303!3d10.335986392621301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa065858cca930d%3A0x1b05f1a343eb8f0f!2sPizza+Ranch+Ciudad+Quesada!5e0!3m2!1ses-419!2scr!4v1520782240628" width="100%" height="200" frameborder="0" style="border:0"></iframe>
 					</div>
 				</div>
 			</div>
 			<div class="col-1-3">
 				<div class="wrap-col">
-					<h4>Horario</h4>					
-					<p><span>Lunes a Domingo</span> 11:00 – 21:00</p>					
+					<h4>Horario</h4>
+					<p><span>Lunes a Domingo</span> 11:00 – 21:00</p>
 				</div>
 			</div>
 		</div>
