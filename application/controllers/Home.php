@@ -45,6 +45,67 @@ class Home extends CI_Controller {
 		$this->load->view('Galeria');
 	}
 
+	public function pizzas()
+		{
+			$pizzas = $this->Ranch_model->cargarPizzas();
+			$data['pizzas'] = $pizzas;
+			$this->load->view('Pedidos/Pizzas', $data);
+		}
+		public function calzone()
+		{
+			$calzones = $this->Ranch_model->cargarCalzones();
+			$data['calzones'] = $calzones;
+			$this->load->view('Pedidos/Calzone', $data);
+		}
+
+		public function golosinas()
+		{
+			$golosinas = $this->Ranch_model->cargarGolosinas();
+			$data['golosinas'] = $golosinas;
+			$this->load->view('Pedidos/Golosinas', $data);
+		}
+		public function ordenes()
+		{
+			$ordenes = $this->Ranch_model->cargarOrdenes();
+			$data['ordenes'] = $ordenes;
+			$this->load->view('Pedidos/Ordenes', $data);
+		}
+		public function postre()
+		{
+			$postres = $this->Ranch_model->cargarPostres();
+			$data['postres'] = $postres;
+			$this->load->view('Pedidos/Postre', $data);
+		}
+		public function bebidas()
+		{
+			$bebidas = $this->Ranch_model->cargarBebidas();
+			$data['bebidas'] = $bebidas;
+			$this->load->view('Pedidos/Bebidas', $data);
+		}
+
+		public function pizzamitades()
+		{
+			$pizzasm = $this->Ranch_model->cargarPizzasMitades();
+			$data['pizzasm'] = $pizzasm;
+			$this->load->view('Pedidos/PizzaMitades', $data);
+		}
+		public function pasta()
+		{
+			$pastas = $this->Ranch_model->cargarPastas();
+			$data['pastas'] = $pastas;
+			$this->load->view('Pedidos/Pasta', $data);
+		}
+		public function cargarSelect()
+		{
+			$select = $this->Ranch_model->cargarPizzas();
+			$datasel['pizzas'] = $select;
+			$this->load->view('Pedidos/PizzaMitades', $datasel);
+		}
+
+			public function ordenar()
+		{
+			$this->load->view('Ordenar');
+		}
 		public function promos()
 	{
 		$promos = $this->Ranch_model->cargarPromos();
