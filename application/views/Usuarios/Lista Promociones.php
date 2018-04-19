@@ -131,9 +131,9 @@
                                                                 <?php foreach ($promos as $index=> $promo){ ?>
                                                                 <tbody>
                                                                     <tr>
-                                                                        <td><img src="images/promo.jpg" /> </td>
+                                                                        <td><img style="width:60%;" src="<?php echo base_url(). "Pizza-RanchCR/uploads_promos/$promo->foto" ?>" /> </td>
                                                                         <td><?php echo $promo->descripcion; ?></td>
-                                                                        <td class="text-right">₡ <?php echo $promo->precio; ?></td>
+                                                                        <td class="text-right" style="width:25%;">₡ <?php echo $promo->precio; ?></td>
                                                                         <td class="text-right"><button class="btn btn-sm btn-danger"><i class="fa fa-trash"></i> </button> </td>
                                                                     </tr>
                                                                 </tbody>

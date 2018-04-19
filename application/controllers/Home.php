@@ -194,13 +194,13 @@ class Home extends CI_Controller {
 			$precio = $this->input->post('precio');
 			//Get image
 			$config['upload_path'] = './uploads_promos/';
-			$config['allowed_types'] = 'jpg|jpeg';
+			$config['allowed_types'] = 'jpg|jpeg|png';
 			$this->load->library('upload', $config);
 			$this->upload->initialize($config);
 			if (!$this->upload->do_upload('userfile')) {
 				$error_foto =$this->upload->display_errors();
-				//echo  $error_foto;
-				//die();
+				echo  $error_foto;
+				die();
 				//$this->load->view('welcome_message',$error_foto);
 			}
 			$file_data = $this->upload->data();

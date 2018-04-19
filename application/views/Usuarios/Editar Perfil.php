@@ -66,7 +66,7 @@
 
         <nav id="sidebar">
             <div class="sidebar-header d-flex align-items-center">
-            <div class="avatar center-block img-thumbnail" style="background-image: url(fotosPerfil/)"  alt="..."></div>
+            <div class="avatar center-block img-thumbnail" style="background-image: url()"  alt="..."></div>
                 <div class="title">
                   <p><?php echo $user->nombre, " ", $user->apellidos; ?></p>
                 </div>
@@ -240,53 +240,71 @@
     </div>
 
     <!-- modal -->
-<div id="fsModal"
-     class="modal animated bounceIn"
-     tabindex="-1"
-     role="dialog"
-     aria-labelledby="myModalLabel"
-     aria-hidden="true">
-
+<div id="fsModal" class="modal animated bounceIn" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <!-- dialog -->
   <div class="modal-dialog">
-
     <!-- content -->
     <div class="modal-content">
 
       <!-- header -->
       <div class="modal-header">
-        <h1 id="myModalLabel"
-            class="modal-title">
-          Modal title
-        </h1>
+        <h5 id="myModalLabel" class="modal-title">Actualizar Ubicación</h5>
       </div>
       <!-- header -->
 
       <!-- body -->
       <div class="modal-body">
-          
-          <div id="map">
-            <script async defer
-              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVDzvvE7UhvRLQXBbsbr4ILGTqrIt50EA&callback=initMap">
-            </script>
+        <label class="row">
+
+            <div class="wrap-col">
+                                        <div id="map">
+                                            <script async defer
+                                                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVDzvvE7UhvRLQXBbsbr4ILGTqrIt50EA&callback=initMap">
+                                            </script>
+              </div>
+              </div>
+
+            <div class="col-1-3">
+              <div class="wrap-col">
+                <label for="lat">Latitud</label>
+                <input type="text" name="lat" id="lat" readonly>
+              </div>
+            </div>
+            <div class="col-1-3">
+              <div class="wrap-col">
+                <label for="lng">Longitud</label>
+                <input type="text" name="lng" id="lng" readonly>
+              </div>
+            </div>
+          <!-- <div class="col-1-3">
+            <div class="wrap-col">
+            <select type="text" name="subject" id="subject" required="required">
+                                        <option selected disabled value="">Provincia</option>
+                                    </select>
+            </div>
           </div>
-
-
+          <div class="col-1-3">
+            <div class="wrap-col">
+            <select type="text" name="subject" id="subject" required="required">
+                                        <option selected disabled value="">Canton</option>
+                                    </select>
+            </div>
+          </div>
+          <div class="col-1-3">
+            <div class="wrap-col">
+            <select type="text" name="subject" id="subject" required="required">
+                                        <option selected disabled value="">Distrito</option>
+                                    </select>
+            </div>
+          </div>											 -->
+                            </label>
       </div>
       <!-- body -->
 
       <!-- footer -->
       <div class="modal-footer">
-        <button class="btn btn-secondary"
-                data-dismiss="modal">
-          close
-        </button>
-        <button class="btn btn-default">
-          Default
-        </button>
-        <button class="btn btn-primary">
-          Primary
-        </button>
+        <button class="btn btn-secondary" data-dismiss="modal">close</button>
+        <button class="btn btn-primary">Actualizar</button>
       </div>
       <!-- footer -->
 
@@ -302,7 +320,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script src="css/js/bootstrap.min.js"></script>
     <script src="js/usuario.js"></script>
-    <script src="js/map.js"></script>
     <script type="text/javascript">
         function cargarDatos(){
           var datos =  <?php echo json_encode($usuario,JSON_FORCE_OBJECT); ?>;
@@ -316,6 +333,7 @@
           document.getElementById('lng').value=datos[0]['lng'];
         }
     </script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>

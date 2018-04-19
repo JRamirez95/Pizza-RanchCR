@@ -100,7 +100,7 @@
                         <div class="card bg-light mb-3">
                             <div class="card-body">
                                 <a href="" data-toggle="modal" data-target="#productModal">
-                                    <img class="img-fluid" src="https://s3.amazonaws.com/visit-nebraska-production/eats/images/000/009/677/slider/Pizza_Ranch.jpg?1488322947" />
+                                    <img class="img-fluid" src="<?php echo base_url(). "Pizza-RanchCR/uploads_promos/$promo->foto" ?>" style="width:100%; height:100%;"/>
                                 </a>
                             </div>
                         </div>
@@ -201,7 +201,7 @@
 </div>
 
 	<!-- js -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/classie.js"></script>
 	<script src="js/demo.js"></script>

@@ -126,6 +126,7 @@
                                                 <div class="form-group">
                                                     <label>Subir foto</label>
                                                     <input name="userfile" type="file" class="form-control">
+                                                    <span align="center">Tamaño Recomendado 307 Ancho x 450 Alto</span>
                                                 </div>
                                                   <div class="form-group row">
                                                 <div class="col-sm-9 ml-auto">
